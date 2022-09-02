@@ -17,8 +17,8 @@ export async function activate(context: vscode.ExtensionContext) {
 
 	statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 0);
 	statusBarItem.command = commandId;
+	
 	context.subscriptions.push(statusBarItem);
-
 	context.subscriptions.push(vscode.window.onDidChangeActiveTextEditor(updateStatusBarItem));
 	context.subscriptions.push(vscode.workspace.onDidChangeTextDocument(updateStatusBarItem));
 
