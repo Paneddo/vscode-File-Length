@@ -1,5 +1,9 @@
-# Status Bar Sample
+# Status Bar vscode Extension
 
-## VS Code API
+This Extension displays in the status bar the length of the file that is currently being edited
 
-### `vscode` module
+GitHub Repo: [https://github.com/Paneddo/vscode-File-Lenght](https://github.com/Paneddo/vscode-File-Lenght/)
+
+ToDo:
+- [ ] Show length of all open files
+- [ ] 
