@@ -3,15 +3,15 @@
 	"displayName": "File Length",
 	"description": "Shows the number of lines in the current file in the status bar",
 	"version": "0.0.2",
-	"publisher": "vscode-samples",
+	"publisher": "Paneddo",
 	"private": true,
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Microsoft/vscode-extension-samples"
+		"url": "https://github.com/Paneddo/File-Length"
 	},
 	"bugs": {
-		"url": "https://github.com/Microsoft/vscode-extension-samples/issues"
+		"url": "https://github.com/Paneddo/File-Length/issues"
 	},
 	"engines": {
 		"vscode": "^1.32.0"
