@@ -14,7 +14,7 @@
 		"url": "https://github.com/Paneddo/File-Length/issues"
 	},
 	"engines": {
-		"vscode": "^1.32.0"
+		"vscode": "^1.71.0"
 	},
 	"categories": [
 		"Other"
@@ -31,7 +31,7 @@
 	},
 	"devDependencies": {
 		"@types/node": "^18.7.14",
-		"@types/vscode": "^1.70.0",
+		"@types/vscode": "^1.71.0",
 		"@typescript-eslint/eslint-plugin": "^5.36.1",
 		"@typescript-eslint/parser": "^5.36.1",
 		"eslint": "^8.23.0",
