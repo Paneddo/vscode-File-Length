@@ -1,6 +1,6 @@
 {
-	"name": "file-lenght",
-	"displayName": "File Lenght",
+	"name": "file-length",
+	"displayName": "File Length",
 	"description": "Shows the number of lines in the current file in the status bar",
 	"version": "0.0.2",
 	"publisher": "vscode-samples",
