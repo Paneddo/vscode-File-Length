@@ -8,10 +8,10 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Paneddo/File-Length"
+		"url": "https://github.com/Paneddo/vscode-File-Length"
 	},
 	"bugs": {
-		"url": "https://github.com/Paneddo/File-Length/issues"
+		"url": "https://github.com/Paneddo/vscode-File-Length/issues"
 	},
 	"engines": {
 		"vscode": "^1.30.0"
