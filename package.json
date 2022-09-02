@@ -2,7 +2,7 @@
 	"name": "file-length",
 	"displayName": "File Length",
 	"description": "Shows the number of lines in the current file in the status bar",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"publisher": "Paneddo",
 	"private": true,
 	"license": "MIT",
