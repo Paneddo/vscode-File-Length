@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 
 let statusBarItem: vscode.StatusBarItem;
 
-export async function activate(context: vscode.ExtensionContext) {
+export function activate(context: vscode.ExtensionContext) {
 
 	const commandId = 'sample.showSelectionCount';
 	context.subscriptions.push(vscode.commands.registerCommand(commandId, () => {
