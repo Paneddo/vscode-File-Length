@@ -4,7 +4,7 @@ let statusBarItem: vscode.StatusBarItem;
 
 export function activate(context: vscode.ExtensionContext) {
 
-	const commandId = 'sample.showSelectionCount';
+	const commandId = 'file-length.ShowLinesCount';
 	context.subscriptions.push(vscode.commands.registerCommand(commandId, () => {
 		const linesCount = getFileLength(vscode.window.activeTextEditor);
 		const openDocument = vscode.window.activeTextEditor?.document;
