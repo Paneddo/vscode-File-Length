@@ -14,13 +14,13 @@
 		"url": "https://github.com/Paneddo/File-Length/issues"
 	},
 	"engines": {
-		"vscode": "^1.71.0"
+		"vscode": "^1.30.0"
 	},
 	"categories": [
 		"Other"
 	],
 	"activationEvents": [
-		"*"
+		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
 	"scripts": {
@@ -31,10 +31,11 @@
 	},
 	"devDependencies": {
 		"@types/node": "^18.7.14",
-		"@types/vscode": "^1.71.0",
+		"@types/vscode": "^1.30.0",
 		"@typescript-eslint/eslint-plugin": "^5.36.1",
 		"@typescript-eslint/parser": "^5.36.1",
 		"eslint": "^8.23.0",
 		"typescript": "^4.8.2"
 	}
 }
+
