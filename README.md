@@ -7,4 +7,4 @@ GitHub Repo: [https://github.com/Paneddo/vscode-File-Length](https://github.com/
 
 ToDo:
 - [ ] Show length of all open files
-- [ ] Let the user choose which file types (*.py *.js *.txt etc...) he wants the extension to be active for
+- [ ] Let the user choose which file types (``*.py``, ``*.js``, ``*.txt`` etc...) he wants the extension to be active for
