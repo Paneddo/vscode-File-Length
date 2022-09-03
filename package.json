@@ -23,6 +23,16 @@
 		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "file-length.ShowLinesCount",
+				"title": "Show Lines Count",
+				"shortTitle": "Lines",
+				"category": "File Length"
+			}
+		]
+	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
