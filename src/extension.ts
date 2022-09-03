@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 
 type fileStats = {
+	name: string;
 	lines: number;
 	column?: number;
 };
@@ -12,13 +13,12 @@ export function activate(context: vscode.ExtensionContext) {
 
 	const commandId = 'file-length.ShowLinesCount';
 	context.subscriptions.push(vscode.commands.registerCommand(commandId, () => {
-		const linesCount: string = getFileLength();
-		const openDocument = vscode.window.activeTextEditor?.document;
-		const displayName = openDocument?.isUntitled ? '' : openDocument?.fileName;
+		const currentDocument = vscode.window.activeTextEditor?.document;
+		const displayName = currentDocument?.isUntitled ? '' : currentDocument?.fileName;
 		const workSpace = vscode.workspace.workspaceFolders?.[0].uri.path;
 		const fileName = displayName?.replace(workSpace? workSpace : '', '');
 
-		vscode.window.showInformationMessage(`File ${fileName} is ${linesCount} lines long`);
+		vscode.window.showInformationMessage(`File ${fileName} is ${currentDocument?.lineCount} lines long`);
 	}));
 
 	statusBarItem = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 0);
@@ -36,25 +36,30 @@ export function activate(context: vscode.ExtensionContext) {
 }
 
 function updateStatusBarItem(): void {
-	const lines = getFileLength();
+	const text = statusBarText();
 	
-	if (lines) {
-		statusBarItem.text = `$(list-ordered) Length: ${lines}`;
+	if (text !== '') {
+		statusBarItem.text = `$(list-ordered) Length: ${text}`;
 		statusBarItem.show();
 	} else {
 		statusBarItem.hide();
 	}
 }
 
-function getFileLength(): string {
+function openFileStats(): Array<fileStats> {
 	const visibleEditors: ReadonlyArray<vscode.TextEditor> = vscode.window.visibleTextEditors;
 	const openFiles: Array<fileStats> = [];
 	visibleEditors.forEach(e => openFiles.push({
+		name: e.document.fileName,
 		lines: e.document.lineCount,
 		column: e.viewColumn
 	}));
 	openFiles.sort((a, b) => (a.column == undefined ? Number.MAX_VALUE : a.column) - (b.column  == undefined ? Number.MAX_VALUE : b.column));
-	
-	const sortedLengths: Array<number> = openFiles.map(file => file.lines);
+	return openFiles;
+}
+
+
+function statusBarText(): string {
+	const sortedLengths: Array<number> = openFileStats().map(file => file.lines);
 	return sortedLengths.join(` ${separator} `);
 }
